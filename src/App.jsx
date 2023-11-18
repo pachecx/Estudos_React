@@ -7,6 +7,10 @@ import { MyComponent } from './component/MyComponent';
 import { Events } from './component/Events';
 import { EventFuncion } from './component/EventFunction';
 import { FuncionRender } from './component/functionRender';
+import { Data } from './component/Data';
+import { DataDois } from './component/DataDois';
+import { ListRender } from './component/ListRender';
+import { Condi } from './component/ConditionalRender';
 
 // Importando imagem
 import two from './assets/m3.jpg';
@@ -53,8 +57,18 @@ function App() {
       <img src= {two} />
       <img src= {four} />
       <img src= {ippo} />
+      {/* UseState */}
       <h1>HOOKS</h1>
       <h2>UseState:</h2>
+      <Data />
+      <DataDois />
+
+      {/* Renderização de lista */}
+      <h1>Renderização de lista:</h1>
+      <ListRender />  
+
+      <h1>Condição IF:</h1>
+      <Condi />
 
     </div>
   );
