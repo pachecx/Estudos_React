@@ -14,6 +14,10 @@ import { Condi } from './component/ConditionalRender';
 import { ShowUser } from './component/ShowUserName';
 import { CarDetails } from './component/CarDetails';
 import { DetailsJob } from './component/DetailsJob';
+import { Fragment } from './component/Fragment';
+import { Container } from './component/Container';
+import { ExecuteFunction } from './component/ExecutionFunction';
+import { FunctionProp } from './component/FunctionInProp';
 
 // Importando imagem
 import two from './assets/m3.jpg';
@@ -23,6 +27,15 @@ import ippo from './public/ippo.png';
 
 
 function App() {
+
+  function ShowMessege(){
+    console.log('Executando função em Prop')
+  }
+
+  function ThisMessenge(){
+    console.log('Deu certo!')
+  }
+
   return (
     <div className="App">
       {/* Criação do Primeiro Componente */}
@@ -86,7 +99,7 @@ function App() {
 
       <h1>Renderização de lista com componentes:</h1>
 
-      const users = [
+      {/* const users = [
         {id: 1, name: 'Matheus', age: 28},
         {id: 2, name: 'Pedro', age: 50},
         {id: 3, name: 'lucas', age: 18}
@@ -94,8 +107,20 @@ function App() {
 
       {user.map((car)=>(
         <CarDetails key={car.id} model={car.model} age={car.age} color={car.color}/>
-      ))}
+      ))} */}
 
+      <h1>Fragments:</h1>
+      <Fragment />
+
+      <h1>Children:</h1>
+      <Container>
+
+      <h2>Teste Container</h2>
+      </Container>
+
+      <h2>Função em PROP:</h2>
+      <ExecuteFunction myFunction={ShowMessege}/>
+      <FunctionProp ThisFunction={ThisMessenge}/>
     </div>
   );
 }
