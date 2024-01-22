@@ -19,6 +19,9 @@ import { Container } from './component/Container';
 import { ExecuteFunction } from './component/ExecutionFunction';
 import { FunctionProp } from './component/FunctionInProp';
 
+import { NavBar } from './component/NavBar';
+import { Home } from './Home';
+
 // Importando imagem
 import two from './assets/m3.jpg';
 import four from './assets/m4.jpg';
@@ -121,6 +124,8 @@ function App() {
       <h2>Função em PROP:</h2>
       <ExecuteFunction myFunction={ShowMessege}/>
       <FunctionProp ThisFunction={ThisMessenge}/>
+
+      <NavBar/>
     </div>
   );
 }

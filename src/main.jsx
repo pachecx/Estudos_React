@@ -6,6 +6,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider, Router } from 'react-router-dom';
 import Contact from './routes/Contacts.jsx';
 import ErrorPage from './routes/ErrorPage.jsx';
+import { Home } from './Home.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,11 @@ const router = createBrowserRouter([
   {
     path:"contact",
     element: <Contact/>
-  }
+  },
+  {
+    path:"/home",
+    element: <Home/>
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
