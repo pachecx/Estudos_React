@@ -13,6 +13,9 @@ const reducer = (state, action) => {
 
       return { count: state.count - 1 };
 
+    case "reset":
+        return { count: state.count = 0}
+
       default:
         return state;
   }
@@ -23,7 +26,7 @@ export const UseReduce = () => {
 
   return (
     <div>
-      <h1>Contador</h1>
+      <h1>Contador usando useReduce:</h1>
 
       <div>
         <button onClick={() => dispatch(({ type: "decrement"}))}>-</button>
@@ -32,6 +35,7 @@ export const UseReduce = () => {
 
         <button onClick={() => dispatch(({ type: "increment"}))}>+</button>
       </div>
+      <button onClick={() => dispatch({type: "reset"})}>RESETAR</button>
     </div>
   );
 };

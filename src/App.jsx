@@ -1,16 +1,15 @@
-import './App.css';
-import { UseReduce } from './Hooks/UseReduce';
+import "./App.css";
+import Form3 from "./component/Form3";
 
 
 function App() {
-
   return (
     <div className="App">
-     <h1>UseReduce</h1>
+      <h1>teste</h1>
 
-     <UseReduce />
+      <Form3 />
     </div>
   );
 }
 
-export default App
+export default App;
