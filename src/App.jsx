@@ -1,13 +1,11 @@
 import "./App.css";
-import Form3 from "./component/Form3";
-
+import Todo1 from "./component/Todo1";
 
 function App() {
   return (
     <div className="App">
       <h1>teste</h1>
-
-      <Form3 />
+     <Todo1 />
     </div>
   );
 }
